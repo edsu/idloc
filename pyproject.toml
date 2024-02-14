@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "locid"
+name = "idloc"
 version = "0.1.0"
 description = "Get JSON-LD for a Library of Congress name or subject authority."
 authors = ["Ed Summers <ehs@pobox.com>"]
@@ -18,7 +18,7 @@ pytest = "^8.0.0"
 black = "^24.2.0"
 
 [tool.poetry.scripts]
-locid = "locid:cli"
+idloc = "idloc:cli"
 
 [build-system]
 requires = ["poetry-core"]

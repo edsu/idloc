@@ -137,7 +137,7 @@ def search(q: str, concept_schemes: List[str] = [], limit=0, sleep=1) -> List:
     stop at a particular point. By default all results will be returned.
 
     You can optionally pass in one or more concept scheme names. To see what
-    valid names are use the mapping in locid.CONCEPT_SCHEMES (there are quite
+    valid names are use the mapping in idloc.CONCEPT_SCHEMES (there are quite
     a few!). By default all will be searched.
 
     The sleep parameter is there to prevent rapid repeated querying. It is the

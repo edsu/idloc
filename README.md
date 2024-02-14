@@ -1,30 +1,30 @@
-# locid 
+# idloc 
 
-[![Build Status](https://github.com/edsu/locid/actions/workflows/test.yml/badge.svg)](https://github.com/edsu/locid/actions/workflows/test.yml)
+[![Build Status](https://github.com/edsu/idloc/actions/workflows/test.yml/badge.svg)](https://github.com/edsu/idloc/actions/workflows/test.yml)
 
 
-*locid* is a command line utility and small function library for getting JSON-LD from the Library of Congress Linked Data service at https://id.loc.gov.
+*idloc* is a command line utility and small function library for getting JSON-LD from the Library of Congress Linked Data service at https://id.loc.gov.
 
-Ideally *locid* would not be needed at all because you could just use [curl](https://curl.se/) or whatever HTTP library you want to fetch the JSON-LD directly. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/). *locid* uses [pyld] internally to do the framing that makes the JSON usable by someone who just wants to use the data as JSON without the cognitive overhead of using RDF processing tools.
+Ideally *idloc* would not be needed at all because you could just use [curl](https://curl.se/) or whatever HTTP library you want to fetch the JSON-LD directly. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/). *idloc* uses [pyld] internally to do the framing that makes the JSON usable by someone who just wants to use the data as JSON without the cognitive overhead of using RDF processing tools.
 
 ## Install
 
-This will install *locid* and its dependencies:
+This will install *idloc* and its dependencies:
 
 ```bash
-pip install locid
+pip install idloc
 ```
 
 ## CLI
 
-Once installed you should also have a *locid* command line utility available. There are four commands get, lucky, search, concept-schemes.
+Once installed you should also have a *idloc* command line utility available. There are four commands get, lucky, search, concept-schemes.
 
 ### Get
 
 Get will fetch the id.loc.gov entity by URI and print out the framed JSON-LD:
 
 ```bash
-$ locid get https://id.loc.gov/authorities/subjects/sh2002000569
+$ idloc get https://id.loc.gov/authorities/subjects/sh2002000569
 ```
 
 To see the output of this command see [this file](examples/sh2002000569.json) since it's really too long to include inline here in the docs.
@@ -36,13 +36,13 @@ Compare that to the JSON that is being made available at https://id.loc.gov/auth
 If you want to roll the dice and see the JSON-LD for first entity that matches a given string:
 
 ```
-$ locid lucky "Semantic Web"
+$ idloc lucky "Semantic Web"
 ```
 
 If you want to limit to particular concept schemes like `subject-headings` you can:
 
 ```
-$locid lucky --concept-scheme subject-headings "Semantic Web"
+$idloc lucky --concept-scheme subject-headings "Semantic Web"
 ```
 
 ### Search
@@ -50,7 +50,7 @@ $locid lucky --concept-scheme subject-headings "Semantic Web"
 You can search for entities:
 
 ```
-$ locid search "Semantic Web" --limit 5
+$ idloc search "Semantic Web" --limit 5
 
 International Semantic Web Conference (6th : 2007 : Pusan, Korea) Semantic Web : 6th International Semantic Web Conference, 2nd Asian Semantic Web Conference, ISWC 2007 + ASWC 2007, Busan, Korea, November 11-15, 2007 : proceedings
 <http://id.loc.gov/resources/works/15024802>
@@ -71,7 +71,7 @@ International Semantic Web Conference (1st : 2002 : Sardinia, Italy) The semanti
 Notice how the top 5 were taken up with bibframe instances? Similar to `get` you can limit a search to one or more concept schemes. For example if we want to search for "Semantic Web" only in the `subject-headings` and `name-authority` concept schemes:
 
 ```
-$ locid search --concept-scheme subject-headings --concept-scheme name-authority "Semantic Web" 
+$ idloc search --concept-scheme subject-headings --concept-scheme name-authority "Semantic Web" 
 ```
 
 ### Concept Schemes
@@ -79,12 +79,12 @@ $ locid search --concept-scheme subject-headings --concept-scheme name-authority
 You may be wondering what concept schemes are available. To see a list of them:
 
 ```
-$ locid concept-schemes
+$ idloc concept-schemes
 ```
 
 ## Use as a Library
 
-The locid Python library can be used in your Python programs.
+The idloc Python library can be used in your Python programs.
 
 
 ### Get
@@ -92,9 +92,9 @@ The locid Python library can be used in your Python programs.
 You can get the JSON-LD for a given id.loc.gov URI:
 
 ```
-import locid
+import idloc
 
-concept = locid.get('http://id.loc.gov/authorities/subjects/sh2002000569')
+concept = idloc.get('http://id.loc.gov/authorities/subjects/sh2002000569')
 ```
 
 ### Search
@@ -102,14 +102,14 @@ concept = locid.get('http://id.loc.gov/authorities/subjects/sh2002000569')
 You can search for entities:
 
 ```python
-for result in locid.search('Semantic Web'):
+for result in idloc.search('Semantic Web'):
     print(result['name'], result['uri']
 ```
 
 Similarly you can limit to particular concept schemes:
 
 ```python
-for result in locid.search('Semantic Web', concept_schemes=['subject-headings', 'name-authority']):
+for result in idloc.search('Semantic Web', concept_schemes=['subject-headings', 'name-authority']):
     print(result['name'], result['uri'])
 ```
 
@@ -120,9 +120,9 @@ By default you get the first 20 results, but you can use the `limit` parameter t
 A mapping of concept scheme names and their corresponding URIs is available in:
 
 ```python
-locid.CONCEPT_SCHEMES
+idloc.CONCEPT_SCHEMES
 ```
 
-There are 130 of them! There is also a function `locid.concept_schemes()` which will scrape the search interface at https://id.loc.gov/search to determine what the latest group of concept schemes is.
+There are 130 of them! There is also a function `idloc.concept_schemes()` which will scrape the search interface at https://id.loc.gov/search to determine what the latest group of concept schemes is.
 
 [pyld]: https://github.com/digitalbazaar/pyld
