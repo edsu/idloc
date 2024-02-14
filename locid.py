@@ -17,55 +17,86 @@ from pyld import jsonld
 
 # cli
 
+
 @click.group()
 def cli() -> None:
     pass
 
-@cli.command('get', help='Get an id.loc.gov entity by URI and print out JSON-LD')
-@click.argument('uri', required=True)
+
+@cli.command("get", help="Get an id.loc.gov entity by URI and print out JSON-LD")
+@click.argument("uri", required=True)
 def get_command(uri: str) -> None:
     data = get(uri)
     print(json.dumps(data, indent=2))
 
-@cli.command('lucky', help='Return the first matching entity as JSON-LD')
-@click.option('--concept-scheme', 'concept_schemes', multiple=True, help='A concept scheme to limit to (can repeat)')
-@click.argument('query', required=True)
+
+@cli.command("lucky", help="Return the first matching entity as JSON-LD")
+@click.option(
+    "--concept-scheme",
+    "concept_schemes",
+    multiple=True,
+    help="A concept scheme to limit to (can repeat)",
+)
+@click.argument("query", required=True)
 def lucky_command(query, concept_schemes):
     check_concept_schemes(concept_schemes, exit=True)
     result = next(search(query, concept_schemes))
     if result:
-        print(json.dumps(get(result['uri']), indent=2))
+        print(json.dumps(get(result["uri"]), indent=2))
     else:
         print(f"No match found for {query}")
 
 
-@cli.command('search', help='Search for entities in id.loc.gov')
-@click.option('--concept-scheme', 'concept_schemes', multiple=True, help='A concept scheme to limit to (can repeat)')
-@click.option('--limit', type=int, default=20, help='Number of records to limit results to (0 is all)')
-@click.argument('query', required=True)
-def search_command(query: str, limit: int=0, concept_schemes: List[str]=[]) -> None:
+@cli.command("search", help="Search for entities in id.loc.gov")
+@click.option(
+    "--concept-scheme",
+    "concept_schemes",
+    multiple=True,
+    help="A concept scheme to limit to (can repeat)",
+)
+@click.option(
+    "--limit",
+    type=int,
+    default=20,
+    help="Number of records to limit results to (0 is all)",
+)
+@click.argument("query", required=True)
+def search_command(query: str, limit: int = 0, concept_schemes: List[str] = []) -> None:
     check_concept_schemes(concept_schemes, exit=True)
     count = 0
     for result in search(query, concept_schemes, limit):
         count += 1
         print(f"{result['title']}\n<{result['uri']}>\n")
 
-@cli.command('concept-schemes', help='list available concept scheme names and their URIs')
+
+@cli.command(
+    "concept-schemes", help="list available concept scheme names and their URIs"
+)
 def concept_schemes_command() -> None:
     for schema_name, schema_id in CONCEPT_SCHEMES.items():
-        print(f'{schema_name}: <{schema_id}>')
+        print(f"{schema_name}: <{schema_id}>")
 
-@cli.command('guess', help='Return the first entity when searching for a particular word or phrase')
-@click.option('--concept-scheme', 'concept_schemes', multiple=True, help='A concept scheme to limit to (can repeat)')
-@click.argument('query', required=True)
+
+@cli.command(
+    "guess",
+    help="Return the first entity when searching for a particular word or phrase",
+)
+@click.option(
+    "--concept-scheme",
+    "concept_schemes",
+    multiple=True,
+    help="A concept scheme to limit to (can repeat)",
+)
+@click.argument("query", required=True)
 def guess(query: str, concept_scheme: List[str]) -> None:
     check_concept_schemes(concept_schemes, exit=True)
     result = next(search(query, concept_scheme))
     if result:
-        print(result['uri'])
+        print(result["uri"])
 
 
 # library functions
+
 
 def get(uri: str) -> dict:
     """
@@ -84,7 +115,7 @@ def get(uri: str) -> dict:
         "bflc": "http://id.loc.gov/ontologies/bflc/",
         "iso6392": "http://id.loc.gov/vocabulary/iso639-2/",
         "changeset": "http://purl.org/vocab/changeset/schema#",
-        "bibframe": "http://id.loc.gov/ontologies/bibframe/"
+        "bibframe": "http://id.loc.gov/ontologies/bibframe/",
     }
 
     return jsonld.frame(
@@ -93,12 +124,12 @@ def get(uri: str) -> dict:
             "@context": context,
             "@id": uri,
             # so we get linked SKOS Concepts in addition to linked MADS Authorities
-            "@embed": "@always"
+            "@embed": "@always",
         },
     )
 
 
-def search(q: str, concept_schemes: List[str]=[], limit=0, sleep=1) -> List:
+def search(q: str, concept_schemes: List[str] = [], limit=0, sleep=1) -> List:
     """
     Searches the id.loc.gov site for a given query. The result is a generator
     that will page through all results. So you may want to provide a limit to
@@ -125,19 +156,19 @@ def search(q: str, concept_schemes: List[str]=[], limit=0, sleep=1) -> List:
     count = 0
     while limit == 0 or count < limit:
         if next_url is None:
-            resp = requests.get('https://id.loc.gov/search/', params)
+            resp = requests.get("https://id.loc.gov/search/", params)
         else:
             resp = requests.get(next_url)
 
         resp.raise_for_status()
 
         doc = ElementTree.fromstring(resp.content)
-        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
 
-        for entry in doc.findall('atom:entry', ns):
+        for entry in doc.findall("atom:entry", ns):
             yield {
-                "title": entry.find('atom:title', ns).text,
-                "uri": entry.find('atom:link', ns).attrib['href']
+                "title": entry.find("atom:title", ns).text,
+                "uri": entry.find("atom:link", ns).attrib["href"],
             }
             count += 1
             if limit != 0 and count >= limit:
@@ -148,7 +179,7 @@ def search(q: str, concept_schemes: List[str]=[], limit=0, sleep=1) -> List:
         if link is None:
             break
         else:
-            next_url = link.attrib['href']
+            next_url = link.attrib["href"]
 
         if sleep != 0:
             time.sleep(sleep)
@@ -161,21 +192,20 @@ def concept_schemes() -> dict:
     """
     resp = requests.get("https://id.loc.gov/search/")
     resp.raise_for_status()
-    html = BeautifulSoup(resp.content, 'html.parser')
+    html = BeautifulSoup(resp.content, "html.parser")
 
     # concept schemes are the first facet box
-    facets = html.select_one('.facet-box')
+    facets = html.select_one(".facet-box")
 
     schemes = {}
-    for a in facets.select('li a'):
-        scheme_id = a['href'].replace('?q=', '')
+    for a in facets.select("li a"):
+        scheme_id = a["href"].replace("?q=", "")
         scheme_name = (
-            a.select_one('span')
-                .text
-                .lower()
-                .replace(' ', '-')
-                .replace('/', '-')
-                .replace('---', '-')
+            a.select_one("span")
+            .text.lower()
+            .replace(" ", "-")
+            .replace("/", "-")
+            .replace("---", "-")
         )
 
         # ignore empty facets
@@ -191,7 +221,8 @@ def concept_schemes() -> dict:
 
     return schemes
 
-def check_concept_schemes(names: List[str], exit: bool=False) -> List[str]:
+
+def check_concept_schemes(names: List[str], exit: bool = False) -> List[str]:
     ids = [CONCEPT_SCHEMES.get(name) for name in names]
     ids = list(filter(lambda id: id is not None, ids))
 
@@ -248,16 +279,22 @@ CONCEPT_SCHEMES = {
     "description-conventions": "http://id.loc.gov/vocabulary/descriptionConventions",
     "authentication-action": "http://id.loc.gov/vocabulary/marcauthen",
     "carriers": "http://id.loc.gov/vocabulary/carriers",
-    "national-bibliography-number-source-codes": "http://id.loc.gov/vocabulary/nationalbibschemes",
+    "national-bibliography-number-source-codes": (
+        "http://id.loc.gov/vocabulary/nationalbibschemes"
+    ),
     "support-material": "http://id.loc.gov/vocabulary/mmaterial",
     "event-type": "http://id.loc.gov/vocabulary/preservation/eventType",
     "demographics-medical": "http://id.loc.gov/authorities/demographicTerms/mpd",
     "projection": "http://id.loc.gov/vocabulary/mprojection",
     "demographics-education": "http://id.loc.gov/authorities/demographicTerms/edu",
-    "name-and-title-authority-source-codes": "http://id.loc.gov/vocabulary/nameTitleSchemes",
+    "name-and-title-authority-source-codes": (
+        "http://id.loc.gov/vocabulary/nameTitleSchemes"
+    ),
     "resource-types-scheme": "http://id.loc.gov/vocabulary/resourceTypes",
     "note-type": "http://id.loc.gov/vocabulary/mnotetype",
-    "relationship-subtype": "http://id.loc.gov/vocabulary/preservation/relationshipSubType",
+    "relationship-subtype": (
+        "http://id.loc.gov/vocabulary/preservation/relationshipSubType"
+    ),
     "content-types": "http://id.loc.gov/vocabulary/contentTypes",
     "playback-characteristics": "http://id.loc.gov/vocabulary/mspecplayback",
     "encoding-format": "http://id.loc.gov/vocabulary/mencformat",
@@ -267,7 +304,9 @@ CONCEPT_SCHEMES = {
     "publication-frequencies": "http://id.loc.gov/vocabulary/frequencies",
     "layout": "http://id.loc.gov/vocabulary/mlayout",
     "video-format": "http://id.loc.gov/vocabulary/mvidformat",
-    "environment-type": "http://id.loc.gov/vocabulary/preservation/environmentFunctionType",
+    "environment-type": (
+        "http://id.loc.gov/vocabulary/preservation/environmentFunctionType"
+    ),
     "resource-components": "http://id.loc.gov/vocabulary/resourceComponents",
     "demographics-age": "http://id.loc.gov/authorities/demographicTerms/age",
     "book-format": "http://id.loc.gov/vocabulary/bookformat",
@@ -276,12 +315,16 @@ CONCEPT_SCHEMES = {
     "supplementary-content": "http://id.loc.gov/vocabulary/msupplcont",
     "playing-speed": "http://id.loc.gov/vocabulary/mplayspeed",
     "notated-music-form": "http://id.loc.gov/vocabulary/mmusicformat",
-    "cryptographic": "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions",
+    "cryptographic": (
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions"
+    ),
     "media-types": "http://id.loc.gov/vocabulary/mediaTypes",
     "presentation-format": "http://id.loc.gov/vocabulary/mpresformat",
     "script": "http://id.loc.gov/vocabulary/mscript",
     "serial-publication-type": "http://id.loc.gov/vocabulary/mserialpubtype",
-    "language-code-and-term-source-codes": "http://id.loc.gov/vocabulary/languageschemes",
+    "language-code-and-term-source-codes": (
+        "http://id.loc.gov/vocabulary/languageschemes"
+    ),
     "relief": "http://id.loc.gov/vocabulary/mrelief",
     "music-notation": "http://id.loc.gov/vocabulary/mmusnotation",
     "aspect-ratio": "http://id.loc.gov/vocabulary/maspect",
@@ -290,7 +333,9 @@ CONCEPT_SCHEMES = {
     "content-location": "http://id.loc.gov/vocabulary/preservation/contentLocationType",
     "encoding-level": "http://id.loc.gov/vocabulary/menclvl",
     "tactile-notation": "http://id.loc.gov/vocabulary/mtactile",
-    "musical-instrumentation-and-voice-code-source-codes": "http://id.loc.gov/vocabulary/musiccodeschemes",
+    "musical-instrumentation-and-voice-code-source-codes": (
+        "http://id.loc.gov/vocabulary/musiccodeschemes"
+    ),
     "color-content": "http://id.loc.gov/vocabulary/mcolor",
     "file-type": "http://id.loc.gov/vocabulary/mfiletype",
     "groove-width-pitch-cutting": "http://id.loc.gov/vocabulary/mgroove",
@@ -301,23 +346,37 @@ CONCEPT_SCHEMES = {
     "code-datatypes": "http://id.loc.gov/datatypes/codes",
     "sound-capture-and-storage": "http://id.loc.gov/vocabulary/mcapturestorage",
     "reduction-ratio": "http://id.loc.gov/vocabulary/mreductionratio",
-    "environment-purpose": "http://id.loc.gov/vocabulary/preservation/environmentPurpose",
-    "linking-agent-role-event": "http://id.loc.gov/vocabulary/preservation/linkingAgentRoleEvent",
+    "environment-purpose": (
+        "http://id.loc.gov/vocabulary/preservation/environmentPurpose"
+    ),
+    "linking-agent-role-event": (
+        "http://id.loc.gov/vocabulary/preservation/linkingAgentRoleEvent"
+    ),
     "rights-basis": "http://id.loc.gov/vocabulary/preservation/rightsBasis",
-    "extended-date-time-format-datatypes-scheme": "http://id.loc.gov/datatypes/EDTFScheme",
+    "extended-date-time-format-datatypes-scheme": (
+        "http://id.loc.gov/datatypes/EDTFScheme"
+    ),
     "identifier-datatypes": "http://id.loc.gov/datatypes/identifiers",
     "issuance": "http://id.loc.gov/vocabulary/issuance",
     "broadcast-standard": "http://id.loc.gov/vocabulary/mbroadstd",
     "playback": "http://id.loc.gov/vocabulary/mplayback",
     "technique": "http://id.loc.gov/vocabulary/mtechnique",
     "agent-type": "http://id.loc.gov/vocabulary/preservation/agentType",
-    "environment-characteristic": "http://id.loc.gov/vocabulary/preservation/environmentCharacteristic",
-    "environment-registry": "http://id.loc.gov/vocabulary/preservation/environmentRegistryRole",
-    "event-related-agent": "http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole",
+    "environment-characteristic": (
+        "http://id.loc.gov/vocabulary/preservation/environmentCharacteristic"
+    ),
+    "environment-registry": (
+        "http://id.loc.gov/vocabulary/preservation/environmentRegistryRole"
+    ),
+    "event-related-agent": (
+        "http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole"
+    ),
     "hardware-type": "http://id.loc.gov/vocabulary/preservation/hardwareType",
     "inhibitor-type": "http://id.loc.gov/vocabulary/preservation/inhibitorType",
     "object-category": "http://id.loc.gov/vocabulary/preservation/objectCategory",
-    "rights-related-agent": "http://id.loc.gov/vocabulary/preservation/rightsRelatedAgentRole",
+    "rights-related-agent": (
+        "http://id.loc.gov/vocabulary/preservation/rightsRelatedAgentRole"
+    ),
     "software-type": "http://id.loc.gov/vocabulary/preservation/softwareType",
     "font-sizes": "http://id.loc.gov/entities/fontsizes",
     "font-size": "http://id.loc.gov/vocabulary/mfont",
@@ -326,17 +385,26 @@ CONCEPT_SCHEMES = {
     "copyright": "http://id.loc.gov/vocabulary/preservation/copyrightStatus",
     "event-outcome": "http://id.loc.gov/vocabulary/preservation/eventOutcome",
     "inhibitor-target": "http://id.loc.gov/vocabulary/preservation/inhibitorTarget",
-    "linking-environment": "http://id.loc.gov/vocabulary/preservation/linkingEnvironmentRole",
-    "preservation-level": "http://id.loc.gov/vocabulary/preservation/preservationLevelRole",
+    "linking-environment": (
+        "http://id.loc.gov/vocabulary/preservation/linkingEnvironmentRole"
+    ),
+    "preservation-level": (
+        "http://id.loc.gov/vocabulary/preservation/preservationLevelRole"
+    ),
     "storage-medium": "http://id.loc.gov/vocabulary/preservation/storageMedium",
-    "fingerprint-scheme-source-codes": "http://id.loc.gov/vocabulary/fingerprintschemes",
+    "fingerprint-scheme-source-codes": (
+        "http://id.loc.gov/vocabulary/fingerprintschemes"
+    ),
     "musical-composition-form-code-source-codes": "http://id.loc.gov/vocabulary/mcfcsc",
     "recording-type": "http://id.loc.gov/vocabulary/mrectype",
     "sound-content": "http://id.loc.gov/vocabulary/msoundcontent",
-    "event-related-object": "http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole",
+    "event-related-object": (
+        "http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole"
+    ),
     "format-registry": "http://id.loc.gov/vocabulary/preservation/formatRegistryRole",
     "signature-encoding": "http://id.loc.gov/vocabulary/preservation/signatureEncoding",
     "signature-method": "http://id.loc.gov/vocabulary/preservation/signatureMethod",
-    "accessibility-content-source-codes": "http://id.loc.gov/vocabulary/accesscontentschemes",
+    "accessibility-content-source-codes": (
+        "http://id.loc.gov/vocabulary/accesscontentschemes"
+    ),
 }
-
