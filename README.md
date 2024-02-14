@@ -119,7 +119,7 @@ By default you get the first 20 results, but you can use the `limit` parameter t
 
 A mapping of concept scheme names and their corresponding URIs is available in:
 
-```
+```python
 locid.CONCEPT_SCHEMES
 ```
 
