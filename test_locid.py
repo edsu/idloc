@@ -8,7 +8,7 @@ def test_search() -> None:
 
 
 def test_get() -> None:
-    subject = locid.locid("http://id.loc.gov/authorities/subjects/sh85050184")
+    subject = locid.get("http://id.loc.gov/authorities/subjects/sh85050184")
     assert subject["skos:prefLabel"]["@value"] == "Food"
 
 
