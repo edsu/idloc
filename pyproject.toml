@@ -15,6 +15,7 @@ click = "^8.1.7"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
+black = "^24.2.0"
 
 [tool.poetry.scripts]
 locid = "locid:cli"
