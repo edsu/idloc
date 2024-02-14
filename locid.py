@@ -26,6 +26,7 @@ def cli() -> None:
 @cli.command("get", help="Get an id.loc.gov entity by URI and print out JSON-LD")
 @click.argument("uri", required=True)
 def get_command(uri: str) -> None:
+    uri = uri.replace('https://', 'http://')
     data = get(uri)
     print(json.dumps(data, indent=2))
 
