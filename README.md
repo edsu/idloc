@@ -24,7 +24,7 @@ $ locid get http://id.loc.gov/authorities/subjects/sh2002000569
 
 *Note: to see sample output visit [sh2002000569.json](examples/sh2002000569.json) since it's really too long to include inline here in the docs.*
 
-Compare that to the JSON that is being made available at https://id.loc.gov/authorities/subjects/sh85021262.json and you may understand why framing it is currently needed.
+Compare that to the JSON that is being made available at https://id.loc.gov/authorities/subjects/sh85021262.json and you will probably see why *framing* the JSON-LD is currently needed if you are going to work with the data as JSON.
 
 ### Lucky
 
