@@ -3,7 +3,9 @@
 [![Build Status](https://github.com/edsu/locid/actions/workflows/test.yml/badge.svg)](https://github.com/edsu/locid/actions/workflows/test.yml)
 
 
-*locid* is a command line utility and small function library for getting JSON-LD from the Library of Congress Linked Data service at https://id.loc.gov. Ideally locid would not be needed at all because you could just use `curl` or `wget` to content negotiate for the JSON-LD. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/) to really be usable. *locid* uses [pyld] to do the framing to make the JSON usable by someone who just wants to use the data as JSON without the overhead of RDF processing tooling.
+*locid* is a command line utility and small function library for getting JSON-LD from the Library of Congress Linked Data service at https://id.loc.gov.
+
+Ideally locid would not be needed at all because you could just use `curl` or `wget` to content negotiate for the JSON-LD. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/) to really be usable. *locid* uses [pyld] to do the framing to make the JSON usable by someone who just wants to use the data as JSON without the cognitive overhead of using RDF processing tools.
 
 ## Install
 
