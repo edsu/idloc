@@ -24,7 +24,7 @@ Once installed you should also have a *locid* command line utility available. Th
 Get will fetch the id.loc.gov entity by URI and print out the framed JSON-LD:
 
 ```bash
-$ locid get http://id.loc.gov/authorities/subjects/sh2002000569
+$ locid get https://id.loc.gov/authorities/subjects/sh2002000569
 ```
 
 *Note: to see sample output visit [sh2002000569.json](examples/sh2002000569.json) since it's really too long to include inline here in the docs.*
