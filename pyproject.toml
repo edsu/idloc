@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "locid"
+version = "0.1.0"
+description = "Get JSON-LD for a Library of Congress name or subject authority."
+authors = ["Ed Summers <ehs@pobox.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyLD = "^2.0.3"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[tool.poetry.scripts]
+locid = "locid:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,1143 @@
+{
+  "@context": {
+    "mads": "http://www.loc.gov/mads/rdf/v1#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "skosxl": "http://www.w3.org/2008/05/skos-xl#",
+    "recordinfo": "http://id.loc.gov/ontologies/RecordInfo#",
+    "identifiers": "http://id.loc.gov/vocabulary/identifiers/",
+    "bflc": "http://id.loc.gov/ontologies/bflc/",
+    "iso6392": "http://id.loc.gov/vocabulary/iso639-2/",
+    "changeset": "http://purl.org/vocab/changeset/schema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/"
+  },
+  "@id": "http://id.loc.gov/authorities/subjects/sh2002000569",
+  "@type": [
+    "mads:Topic",
+    "mads:Authority",
+    "skos:Concept"
+  ],
+  "bflc:marcKey": "150  $aSemantic Web",
+  "bflc:subjectOf": [
+    {
+      "@id": "http://id.loc.gov/resources/works/13524431",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Alesso, H. P. Developing Semantic Web services"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14258029",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Alesso, H. P. Thinking on the Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15295452",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Alesso, H. P. Thinking on the Web : Berners-Lee, G\u00f6del, and Turing"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13992585",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Alexiev, Vladimir. Information integration with ontologies : experiences from an industrial showcase"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15115690",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Allemang, Dean. Semantic web for the working ontologist : modeling in RDF, RDFS and OWL"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13173582",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Annotation for the semantic web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13342292",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Antoniou, G. (Grigoris) semantic Web primer"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14851115",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Antoniou, G. (Grigoris) semantic Web primer"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15640076",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Auer, S\u00f6ren, 1975- Towards agile knowledge engineering : methodology, concepts, and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14580434",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Baker, Christopher J. O. Semantic web : revolutionizing knowledge discovery in the life sciences"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15663290",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Boer, Alexander. Legal theory, sources of law, and the semantic web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14503175",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Breitman, K. K. (Karin K.) Semantic Web : concepts, technologies and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15250029",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Bruijn, Jos de Modeling Semantic Web services : the web service modeling language"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15239550",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Cardoso, Jorge, 1970- Semantic Web engineering in the knowledge society"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14590788",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Cardoso, Jorge, 1970- Semantic Web services : theory, tools, and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14601295",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Cardoso, Jorge, 1970- Semantic Web services, processes and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14142090",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Chopey, Michael A. Knowledge without boundaries : organizing information for the future"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14469492",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Cimiano, Philipp. Ontology learning and population from text : algorithms, evaluation and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14725095",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Colomb, Robert M., 1942- Ontology and the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15502230",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Costa, Paulo Cesar G. da. Uncertainty reasoning for the semantic web I : ISWC international workshops, URSW 2005-2007 : revised selected and invited papers"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15576132",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Cunha, M. Manuela (Maria Manuela), 1964- Handbook of research on social dimensions of semantic technologies and web services"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13069645",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Daconta, Michael C. Semantic Web : a guide to the future of XML, Web services, and knowledge management"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15472212",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Davies, J. (N. John) Semantic knowledge management : integrating ontology management, knowledge discovery, and human language technologies"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14275335",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Davies, J. (N. John) Semantic Web technologies : trends and research in ontology-based systems"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12911248",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Davies, J. (N. John) Towards the semantic web : ontology-driven knowledge management"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14372966",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Devedzic, Vladan. Semantic Web and education"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14486226",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Fensel, Dieter. Enabling semantic web services : the web service modeling ontology"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12276815",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Fensel, Dieter. Ontologies : a silver bullet for knowledge management and electronic commerce"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13367733",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Fensel, Dieter. Ontologies : a silver bullet for knowledge management and electronic commerce"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12639595",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Fensel, Dieter. Spinning the semantic Web : bringing the World Wide Web to its full potential"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14038072",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Ferrari, Elena, 1968- Web and information security"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15212175",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Garc\u00eda, Roberto, 1976- Semantic Web for business : cases and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13951990",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Geroimenko, Vladimir, 1955- Visualizing information using SVG and X3D : XML-based technologies for the XML-based Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12714407",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Geroimenko, Vladimir, 1955- Visualizing the semantic Web : XML-based Internet and information visualization"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13889069",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Geroimenko, Vladimir, 1955- Visualizing the Semantic Web : XML-based Internet and information visualization"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13285882",
+      "@type": "bibframe:Work",
+      "bflc:aap": "G\u00f3mez-P\u00e9rez, Asunci\u00f3n, 1967- Ontological engineering"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14634209",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Greenberg, Jane. Knitting the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15845943",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Grimm, Stephan Semantic matchmaking with nonmonotonic description logics"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15778150",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Hitzler, Pascal. Foundations of Semantic Web technologies"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12304344",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Hjelm, Johan. Creating the semantic Web with RDF : professional developer's guide"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15714459",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Hoekstra, Rinke. Ontology representation : design patterns and ontologies that make sense"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15836391",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International Conference on Database Systems for Advanced Applications (14th : 2009 : Brisbane, Australia) Database systems for advanced applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15049624",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International Conference on Web Information Systems Engineering (8th : 2007 : Nancy, France) Web information systems engineering-- WISE 2007"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14939494",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International journal of semantic computing"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13722738",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International journal on semantic web and information systems"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13722745",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International journal on Semantic Web and information systems"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14443863",
+      "@type": "bibframe:Work",
+      "bflc:aap": "International Workshop on Semantic Media Adaption and Personalization (1st : 2006 : Athens, Greece) SMAP 2006 : proceedings : First International Workshop on Semantic Media Adaptation and Personalization : 4-5 December, 2006, Athens, Greece"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15403671",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Jovanovi\u0107, Jelena, 1978- Dinami\u010dko kreiranje edukativnih sadr\u017eaja na Semanti\u010dkom Web-u"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12954378",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Kashyap, Vipul. Real world semantic web applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13065978",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Knowledge transformation for the semantic web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15080572",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Kompatsiaris, Yiannis. Semantic multimedia and ontologies : theory and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15402428",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Kruk, Sebastian Ryszard. Semantic digital libraries"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14088529",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Leuf, Bo. Semantic Web : crafting infrastructure for agency"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13874465",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Lytras, Miltiadis D., 1973- Intelligent learning infrastructure for knowledge intensive organizations : a semantic web perspective"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15210418",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Ma, Zongmin, 1965- Semantic Web for knowledge and data management : technologies and practices"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14341253",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Ma, Zongmin, 1965- Soft computing in ontologies and semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12595648",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Maedche, Alexander Ontology learning for the semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15134372",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Manning, Christopher D. Introduction to information retrieval"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13198679",
+      "@type": "bibframe:Work",
+      "bflc:aap": "McComb, Dave. Semantics in business systems : the savvy manager's guide : the discipline underlying web services, business rules, and the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14803893",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Mika, Peter, 1978- Social networks and the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15555934",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Mkadmi, Abderrazak Biblioth\u00e8que num\u00e9rique et recherche d'informations"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15836384",
+      "@type": "bibframe:Work",
+      "bflc:aap": "New challenges in computational collective intelligence"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14308708",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Oberle, Daniel. Semantic management of middleware"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15394868",
+      "@type": "bibframe:Work",
+      "bflc:aap": "On-Line Conference on Metadata and Semantics Research (2nd : 2007 : Corfu Island, Greece) Metadata and semantics"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15089518",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Ontology learning and population"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15203366",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Oosterom, Peter van. Creating spatial information infrastructures : towards the spatial Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15763281",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Pacific Rim Knowledge Acquisition Workshop (2008 : Hanoi, Vietnam) Knowledge acquisition : approaches algorithms and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13677896",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Passin, Thomas B. Explorer's guide to the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15615533",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Pollock, Jeffrey T. Semantic Web for dummies"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13503456",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Powers, Shelley. Practical RDF"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14991237",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Priebe, Torsten Building integrative enterprise knowledge portals with Semantic Web technologies"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15042093",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Rech, J\u00f6rg, 1968- Emerging technologies for semantic work environments : techniques, methods, and applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14881274",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Rittgen, Peter, 1964- Handbook of ontologies for business interaction"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14573115",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Salam, A. F., 1966- Semantic web technologies and e-business : toward the integrated virtual organization and business process automation"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15666418",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Sankar, Krishna. Enterprise Web 2.0 fundamentals"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15358130",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Schumacher, Michael, 1957- CASCOM : intelligent service coordination in the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14238666",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Semantic web and beyond"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14437488",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Sharman, Raj. Ontologies : a handbook of principles, concepts and applications in information systems"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14561599",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Sheth, A. (Amit), 1959- Semantic Web-based information systems : state-of-the-art applications"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15532610",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Social web evolution"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14199699",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Soft computing in Web information retrieval"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14146566",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Staab, Steffen. Semantic Web and peer-to-peer : decentralized management and exchange of knowledge and information"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14087862",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Stamou, Giorgos. Multimedia content and the semantic Web : methods, standards, and tools"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13693089",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Stuckenschmidt, Heiner. Information sharing on the semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15805508",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Summer School on Reasoning Web (5th : 2009 : Bressanone, Italy) Reasoning web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14165851",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Taniar, David. Web semantics and ontology"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15546194",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Tao, Dacheng, 1978- Semantic mining technologies for multimedia databases"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14949004",
+      "@type": "bibframe:Work",
+      "bflc:aap": "The semantic web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14917251",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Thuraisingham, Bhavani M. Building trustworthy semantic webs"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/12643431",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Thuraisingham, Bhavani M. XML databases and the semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13668263",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Visser, Ubbo Intelligent information integration for the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15805498",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Vitvar, Tom\u00e1s\u0306. Semantic technologies for E-government"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15089603",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Wallace, Manolis. Advances in semantic media adaptation and personalization"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14739939",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Walton, Christopher D. Agency and the Semantic Web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15830840",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Web 2.0 & semantic web"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15526036",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Yi, H\u014fn-jung Siment\u02bbik rejis\u016dt\u016dri kin\u016dng hyangsang e taehan y\u014fn\u02bcgu \uc2dc\uba58\ud2f1 \ub808\uc9c0\uc2a4\ud2b8\ub9ac \uae30\ub2a5 \ud5a5\uc0c1 \uc5d0 \ub300\ud55c \uc5f0\uad6c"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14665950",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Yu, Liyang. Introduction to Semantic Web and Semantic Web services"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/13084422",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Zhong, Ning, 1956- Web intelligence"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/14054314",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Zhuge, Hai. knowledge grid"
+    },
+    {
+      "@id": "http://id.loc.gov/resources/works/15197838",
+      "@type": "bibframe:Work",
+      "bflc:aap": "Zilli, Antonio. Semantic knowledge management : an ontology-based framework"
+    }
+  ],
+  "identifiers:lccn": "sh2002000569",
+  "mads:adminMetadata": [
+    {
+      "@type": "recordinfo:RecordInfo",
+      "recordinfo:languageOfCataloging": {
+        "@id": "iso6392:eng"
+      },
+      "recordinfo:recordChangeDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2004-04-07T00:00:00"
+      },
+      "recordinfo:recordContentSource": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/dlc"
+      },
+      "recordinfo:recordStatus": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "new"
+      }
+    },
+    {
+      "@type": "recordinfo:RecordInfo",
+      "recordinfo:languageOfCataloging": {
+        "@id": "iso6392:eng"
+      },
+      "recordinfo:recordChangeDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2009-12-15T13:59:47"
+      },
+      "recordinfo:recordContentSource": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/dlc"
+      },
+      "recordinfo:recordStatus": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "revised"
+      }
+    }
+  ],
+  "mads:authoritativeLabel": {
+    "@language": "en",
+    "@value": "Semantic Web"
+  },
+  "mads:classification": [
+    {
+      "@type": "http://id.loc.gov/ontologies/lcc#ClassNumber",
+      "mads:code": "TK5105.88815",
+      "mads:hasExactExternalAuthority": {
+        "@id": "http://id.loc.gov/authorities/classification/TK5105.88815"
+      }
+    },
+    {
+      "@type": "http://id.loc.gov/ontologies/lcc#ClassNumber",
+      "mads:code": "ZA4240",
+      "mads:hasExactExternalAuthority": {
+        "@id": "http://id.loc.gov/authorities/classification/ZA4240"
+      }
+    }
+  ],
+  "mads:elementList": {
+    "@list": [
+      {
+        "@type": "mads:TopicElement",
+        "mads:elementValue": {
+          "@language": "en",
+          "@value": "Semantic Web"
+        }
+      }
+    ]
+  },
+  "mads:hasBroaderAuthority": [
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh92004914",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "Semantic networks (Information theory)"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b0",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "Semantic networks (Information theory)"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Semantic networks (Information theory)"
+      }
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh2004000479",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "Semantic integration (Computer systems)"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b3",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "Semantic integration (Computer systems)"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Semantic integration (Computer systems)"
+      }
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh95000541",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "World Wide Web"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b5",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "World Wide Web"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "World Wide Web"
+      }
+    }
+  ],
+  "mads:hasCloseExternalAuthority": [
+    {
+      "@id": "http://www.yso.fi/onto/yso/p21716",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "fi",
+        "@value": "semanttinen web"
+      },
+      "skos:prefLabel": {
+        "@language": "fi",
+        "@value": "semanttinen web"
+      }
+    },
+    {
+      "@id": "http://purl.org/bncf/tid/48388",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "it",
+        "@value": "Web semantico"
+      },
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Web semantico"
+      }
+    },
+    {
+      "@id": "http://data.bnf.fr/ark:/12148/cb14521343b",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "fr",
+        "@value": "Web s\u00e9mantique"
+      },
+      "skos:prefLabel": {
+        "@language": "fr",
+        "@value": "Web s\u00e9mantique"
+      }
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q54837",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "https://id.worldcat.org/fast/1112076",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "https://d-nb.info/gnd/4688372-1",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "http://datos.bne.es/resource/XX553987",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "es",
+        "@value": "Web sem\u00e1ntica"
+      },
+      "skos:prefLabel": {
+        "@language": "es",
+        "@value": "Web sem\u00e1ntica"
+      }
+    }
+  ],
+  "mads:hasExactExternalAuthority": {
+    "@id": "http://aims.fao.org/aos/agrovoc/c_49832",
+    "@type": [
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "semantic web"
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "semantic web"
+    }
+  },
+  "mads:hasNarrowerAuthority": {
+    "@id": "http://id.loc.gov/authorities/subjects/sh2013002090",
+    "@type": [
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "Linked data"
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "Linked data"
+    }
+  },
+  "mads:hasReciprocalAuthority": {
+    "@id": "http://id.loc.gov/authorities/subjects/sh2009009406",
+    "@type": [
+      "mads:Topic",
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "Microformats"
+    },
+    "mads:elementList": {
+      "@list": [
+        {
+          "@id": "_:b6",
+          "@type": "mads:TopicElement",
+          "mads:elementValue": {
+            "@language": "en",
+            "@value": "Microformats"
+          }
+        }
+      ]
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "Microformats"
+    }
+  },
+  "mads:hasSource": [
+    {
+      "@type": "mads:Source",
+      "mads:citationSource": "Work cat.: 2002070545: The Semantic Web--ISWC 20002, 2002.",
+      "mads:citationStatus": "found"
+    },
+    {
+      "@type": "mads:Source",
+      "mads:citationNote": {
+        "@language": "en",
+        "@value": "in titles (semantic Web)"
+      },
+      "mads:citationSource": "ASTI on FirstSearch, May 6, 2002:",
+      "mads:citationStatus": "found"
+    },
+    {
+      "@type": "mads:Source",
+      "mads:citationNote": {
+        "@language": "en",
+        "@value": "(identifier: Semantic Web)"
+      },
+      "mads:citationSource": "Engr. index online, May 6, 2002",
+      "mads:citationStatus": "found"
+    }
+  ],
+  "mads:isMemberOfMADSCollection": [
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/collection_LCSH_General"
+    }
+  ],
+  "mads:isMemberOfMADSScheme": {
+    "@id": "http://id.loc.gov/authorities/subjects"
+  },
+  "http://www.w3.org/2002/07/owl#sameAs": [
+    {
+      "@id": "info:lc/authorities/sh2002000569"
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/sh2002000569#concept"
+    }
+  ],
+  "skos:broader": [
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh92004914",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "Semantic networks (Information theory)"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b0",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "Semantic networks (Information theory)"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Semantic networks (Information theory)"
+      }
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh2004000479",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "Semantic integration (Computer systems)"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b3",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "Semantic integration (Computer systems)"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Semantic integration (Computer systems)"
+      }
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/subjects/sh95000541",
+      "@type": [
+        "mads:Topic",
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "en",
+        "@value": "World Wide Web"
+      },
+      "mads:elementList": {
+        "@list": [
+          {
+            "@id": "_:b5",
+            "@type": "mads:TopicElement",
+            "mads:elementValue": {
+              "@language": "en",
+              "@value": "World Wide Web"
+            }
+          }
+        ]
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "World Wide Web"
+      }
+    }
+  ],
+  "skos:changeNote": [
+    {
+      "@type": "changeset:ChangeSet",
+      "changeset:changeReason": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "new"
+      },
+      "changeset:createdDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2004-04-07T00:00:00"
+      },
+      "changeset:creatorName": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/dlc"
+      },
+      "changeset:subjectOfChange": {
+        "@id": "http://id.loc.gov/authorities/subjects/sh2002000569"
+      }
+    },
+    {
+      "@type": "changeset:ChangeSet",
+      "changeset:changeReason": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "revised"
+      },
+      "changeset:createdDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2009-12-15T13:59:47"
+      },
+      "changeset:creatorName": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/dlc"
+      },
+      "changeset:subjectOfChange": {
+        "@id": "http://id.loc.gov/authorities/subjects/sh2002000569"
+      }
+    }
+  ],
+  "skos:closeMatch": [
+    {
+      "@id": "http://www.yso.fi/onto/yso/p21716",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "fi",
+        "@value": "semanttinen web"
+      },
+      "skos:prefLabel": {
+        "@language": "fi",
+        "@value": "semanttinen web"
+      }
+    },
+    {
+      "@id": "http://purl.org/bncf/tid/48388",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "it",
+        "@value": "Web semantico"
+      },
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Web semantico"
+      }
+    },
+    {
+      "@id": "http://data.bnf.fr/ark:/12148/cb14521343b",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "fr",
+        "@value": "Web s\u00e9mantique"
+      },
+      "skos:prefLabel": {
+        "@language": "fr",
+        "@value": "Web s\u00e9mantique"
+      }
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q54837",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "https://id.worldcat.org/fast/1112076",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "https://d-nb.info/gnd/4688372-1",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": "Semantic Web",
+      "skos:prefLabel": "Semantic Web"
+    },
+    {
+      "@id": "http://datos.bne.es/resource/XX553987",
+      "@type": [
+        "mads:Authority",
+        "skos:Concept"
+      ],
+      "mads:authoritativeLabel": {
+        "@language": "es",
+        "@value": "Web sem\u00e1ntica"
+      },
+      "skos:prefLabel": {
+        "@language": "es",
+        "@value": "Web sem\u00e1ntica"
+      }
+    }
+  ],
+  "skos:exactMatch": {
+    "@id": "http://aims.fao.org/aos/agrovoc/c_49832",
+    "@type": [
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "semantic web"
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "semantic web"
+    }
+  },
+  "skos:inScheme": {
+    "@id": "http://id.loc.gov/authorities/subjects"
+  },
+  "skos:narrower": {
+    "@id": "http://id.loc.gov/authorities/subjects/sh2013002090",
+    "@type": [
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "Linked data"
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "Linked data"
+    }
+  },
+  "skos:prefLabel": {
+    "@language": "en",
+    "@value": "Semantic Web"
+  },
+  "skos:related": {
+    "@id": "http://id.loc.gov/authorities/subjects/sh2009009406",
+    "@type": [
+      "mads:Topic",
+      "mads:Authority",
+      "skos:Concept"
+    ],
+    "mads:authoritativeLabel": {
+      "@language": "en",
+      "@value": "Microformats"
+    },
+    "mads:elementList": {
+      "@list": [
+        {
+          "@id": "_:b6",
+          "@type": "mads:TopicElement",
+          "mads:elementValue": {
+            "@language": "en",
+            "@value": "Microformats"
+          }
+        }
+      ]
+    },
+    "skos:prefLabel": {
+      "@language": "en",
+      "@value": "Microformats"
+    }
+  }
+}
