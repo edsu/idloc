@@ -5,7 +5,7 @@
 
 *locid* is a command line utility and small function library for getting JSON-LD from the Library of Congress Linked Data service at https://id.loc.gov.
 
-Ideally locid would not be needed at all because you could just use [curl](https://curl.se/) or whatever HTTP library you want to fetch the JSON-LD directly. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/). *locid* uses [pyld] internally to do the framing that makes the JSON usable by someone who just wants to use the data as JSON without the cognitive overhead of using RDF processing tools.
+Ideally *locid* would not be needed at all because you could just use [curl](https://curl.se/) or whatever HTTP library you want to fetch the JSON-LD directly. But at the moment the JSON-LD that is returned, while valid, isn't exactly usable and needs to be [framed](https://www.w3.org/TR/json-ld11-framing/). *locid* uses [pyld] internally to do the framing that makes the JSON usable by someone who just wants to use the data as JSON without the cognitive overhead of using RDF processing tools.
 
 ## Install
 
