@@ -9,7 +9,7 @@ Ideally *locid* would not be needed at all because you could just use [curl](htt
 
 ## Install
 
-This will install locid and its dependencies:
+This will install *locid* and its dependencies:
 
 ```bash
 pip install locid
