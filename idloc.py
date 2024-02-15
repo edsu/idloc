@@ -41,11 +41,11 @@ def get_command(uri: str) -> None:
 @click.argument("query", required=True)
 def lucky_command(query, concept_schemes):
     check_concept_schemes(concept_schemes, exit=True)
-    result = next(search(query, concept_schemes))
-    if result:
+    try:
+        result = next(search(query, concept_schemes))
         print(json.dumps(get(result["uri"]), indent=2))
-    else:
-        print(f"No match found for {query}")
+    except StopIteration:
+        print(f'Alas, there was no match found for "{query}"')
 
 
 @cli.command("search", help="Search for entities in id.loc.gov")

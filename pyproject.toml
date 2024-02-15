@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "idloc"
-version = "0.1.0"
+version = "0.1.1"
 description = "Get JSON-LD for a Library of Congress name or subject authority."
 authors = ["Ed Summers <ehs@pobox.com>"]
 license = "MIT"
