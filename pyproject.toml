@@ -12,6 +12,9 @@ dependencies = [
     "requests>=2.32.3",
 ]
 
+[project.scripts]
+vttdiff = "idloc:cli"
+
 [project.urls]
 homepage = "https://github.com/edsu/idloc"
 
