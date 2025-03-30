@@ -103,14 +103,14 @@ You can search for entities:
 
 ```python
 for result in idloc.search('Semantic Web'):
-    print(result['name'], result['uri']
+    print(result['title'], result['uri']
 ```
 
 Similarly you can limit to particular concept schemes:
 
 ```python
 for result in idloc.search('Semantic Web', concept_schemes=['subject-headings', 'name-authority']):
-    print(result['name'], result['uri'])
+    print(result['title'], result['uri'])
 ```
 
 By default you get the first 20 results, but you can use the `limit` parameter to get more. If you set `limit` to `0` it will page through all the results.
