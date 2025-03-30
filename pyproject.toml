@@ -1,7 +1,7 @@
 [project]
 name = "idloc"
 version = "0.1.2"
-description = "Add your description here"
+description = "Find and get readable JSON-LD from Library of Congress Linked Data Service"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { file = "LICENSE" }
