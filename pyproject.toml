@@ -1,25 +1,19 @@
-[tool.poetry]
+[project]
 name = "idloc"
-version = "0.1.1"
-description = "Get JSON-LD for a Library of Congress name or subject authority."
-authors = ["Ed Summers <ehs@pobox.com>"]
-license = "MIT"
+version = "0.1.2"
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "click>=8.1.8",
+    "pyld>=2.0.4",
+    "requests>=2.32.3",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-PyLD = "^2.0.3"
-requests = "^2.31.0"
-beautifulsoup4 = "^4.12.3"
-click = "^8.1.7"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-black = "^24.2.0"
-
-[tool.poetry.scripts]
-idloc = "idloc:cli"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.11.2",
+]

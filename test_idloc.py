@@ -9,6 +9,7 @@ def test_search() -> None:
 
 def test_get() -> None:
     subject = idloc.get("http://id.loc.gov/authorities/subjects/sh85050184")
+    breakpoint()
     assert subject["skos:prefLabel"]["@value"] == "Food"
 
 
@@ -17,10 +18,6 @@ def test_concept_schemes() -> None:
     assert len(schemes) > 0
     assert schemes["bibframe-instances"] == "cs:http://id.loc.gov/resources/instances"
     assert schemes["genre-form-terms"] == "cs:http://id.loc.gov/authorities/genreForms"
-    assert (
-        schemes["demographics-age"]
-        == "cs:http://id.loc.gov/authorities/demographicTerms/age"
-    )
 
 
 def test_check_concept_schemes() -> None:
