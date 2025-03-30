@@ -9,7 +9,6 @@ def test_search() -> None:
 
 def test_get() -> None:
     subject = idloc.get("http://id.loc.gov/authorities/subjects/sh85050184")
-    breakpoint()
     assert subject["skos:prefLabel"]["@value"] == "Food"
 
 
