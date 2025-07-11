@@ -108,6 +108,7 @@ def get(uri: str) -> dict:
 
     # use this context to parse the JSONLD into something more usable
     context = {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "mads": "http://www.loc.gov/mads/rdf/v1#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "skosxl": "http://www.w3.org/2008/05/skos-xl#",
