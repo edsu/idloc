@@ -27,7 +27,7 @@ Get will fetch the id.loc.gov entity by URI and print out the framed JSON-LD:
 $ idloc get https://id.loc.gov/authorities/subjects/sh2002000569
 ```
 
-To see the output of this command see [this file](examples/sh2002000569.json) since it's really too long to include inline here in the docs.
+To see the output of this command see [this file](https://raw.githubusercontent.com/edsu/idloc/refs/heads/main/examples/sh2002000569.json) since it's really too long to include inline here in the docs.
 
 Compare that to the JSON that is being made available at https://id.loc.gov/authorities/subjects/sh85021262.json and you will probably see why *framing* the JSON-LD is currently needed if you want to work with the data as JSON.
 
