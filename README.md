@@ -82,6 +82,12 @@ You may be wondering what concept schemes are available. To see a list of them:
 $ idloc concept-schemes
 ```
 
+There is a concept scheme for Works too, check it out!
+
+```
+$ idloc get https://id.loc.gov/resources/works/988230
+```
+
 ## Use as a Library
 
 The idloc Python library can be used in your Python programs.
